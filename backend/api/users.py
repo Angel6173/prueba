@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify
-from auth import verify_token
+from ..auth import verify_token
 
 users_bp = Blueprint('users', __name__)
 
