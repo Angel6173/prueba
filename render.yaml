@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: taskflow
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.app:app
+    envVars:
+      PYTHON_VERSION: 3.12.0
+
+databases:
+  - name: taskflow-db
+    databaseName: taskflow_db
+    user: taskflow_user
+    plan: free
