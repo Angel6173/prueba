@@ -1,6 +1,6 @@
 from flask import Flask, render_template, send_from_directory
 from flask_cors import CORS
-from database import get_db_connection
+from .database import get_db_connection
 from auth import auth_bp
 from api.tasks import tasks_bp
 from api.categories import categories_bp
